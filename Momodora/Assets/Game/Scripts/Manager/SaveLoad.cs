@@ -12,12 +12,6 @@ public class SaveLoad
     public int[] positionY;
     public int money = default;
 
-    //public string[] equipItems = new string[5];
-    //public string[] activeItems = new string[5];
-    //public int activeItemsX;
-    //public string[] durationItems = new string[5];
-    //public int durationItemsX;
-
     public SaveLoad(int gameTime_, int[] savePoint_, bool[] eventCheck_, int[] positionX_, int[] positionY_, int money_)
     {
         gameTime = gameTime_;
@@ -26,12 +20,5 @@ public class SaveLoad
         positionX = positionX_;
         positionY = positionY_;
         money = money_;
-
-        //leaf = leaf_;
-        //equipItems = equipItems_;
-        //activeItems = activeItems_;
-        //activeItemsX = activeItemsX_;
-        //durationItems = durationItems_;
-        //durationItemsX = durationItemsX_;
     }
 }

@@ -112,7 +112,6 @@ public class PlayerMove : MonoBehaviour
         playerAudio = GetComponent<AudioSource>();
 
         StartCoroutine(RollStartCheck());
-
         attackSize = new Vector2(1f, 1f);
 
         moveForce = 7.5f;

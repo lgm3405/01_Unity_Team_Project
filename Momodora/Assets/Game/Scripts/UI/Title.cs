@@ -43,42 +43,24 @@ public class Title : MonoBehaviour
     private bool endTitle = false;
     private bool startTitle = false;
 
-
     private string saveCheckString = default;
 
     void Awake()
     {
-        GameManager.userSaveServer = -1;
         logoAlphaX = 0f;
         titleSelect = 0;
         saveSelect = 0;
         selectType = 0;
     }
 
-    Coroutine screen = null;
-    bool isSkip = false;
-
-    void EndRoutine()
-    {
-        StopCoroutine(screen);
-        currImage.color = new Color(255, 255, 255, 255);
-    }
 
     void Start()
     {
-        screen = StartCoroutine(Logo1());
-        //screen = StartCoroutine(TitleScreen());
-        StopCoroutine(screen);
-        endTitle = true;
+        StartCoroutine(Logo1());
     }
 
     void Update()
     {
-        if (Input.anyKeyDown && !endTitle && !isSkip)
-        {
-            isSkip = true;
-        }
-
         if (Input.anyKeyDown && endTitle == true && startTitle == false)
         {
             logoAlphaX = 0f;
@@ -413,7 +395,7 @@ public class Title : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-        screen = StartCoroutine(Logo2());
+        StartCoroutine(Logo2());
     }
 
     IEnumerator Logo2()
@@ -434,7 +416,7 @@ public class Title : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-        screen = StartCoroutine(TitleScreen());
+        StartCoroutine(TitleScreen());
     }
 
     IEnumerator TitleScreen()

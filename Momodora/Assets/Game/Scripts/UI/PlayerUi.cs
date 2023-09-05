@@ -57,7 +57,6 @@ public class PlayerUi : MonoBehaviour
         {
             playerItemCount.gameObject.SetActive(false);
         }
-        
     }
 
     public void GameMenuOn()

@@ -1719,17 +1719,33 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 131193262311416753, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913333992257172464, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415555351926723299, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167506633510042579, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6889628450502011906, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6889628450502011906, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.87
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 6889628450502011906, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.27
+      value: 3.69
       objectReference: {fileID: 0}
     - target: {fileID: 6889628450502011906, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1762,6 +1778,10 @@ PrefabInstance:
     - target: {fileID: 6889628450502011906, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889628450502011909, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6889628450502011909, guid: 763faafe3be225a43bb1eb19ff2ae099, type: 3}
       propertyPath: m_Color.b
@@ -4927,9 +4947,9 @@ MonoBehaviour:
   saveCheck: 0000000000
   isloading: 0
   isDeath: 0
-  userSaveServer: 0
   gameTime: 0
   mapName: 
+  gameTimeCheck: 0000000000000000000000000000000000000000
 --- !u!4 &1346884733
 Transform:
   m_ObjectHideFlags: 0

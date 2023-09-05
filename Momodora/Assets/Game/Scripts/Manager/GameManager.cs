@@ -23,18 +23,16 @@ public class GameManager : MonoBehaviour
     public bool isloading = false;
     public bool isDeath = false;
 
-    public static int userSaveServer = -1;
+    public static int userSaveServer = default;
     public float gameTime = default;
 
     public static string restarMap = null;
     public string mapName = null;
     public int[] gameTimeCheck = new int[5];
 
-
     private string saveCheckString = default;
 
     public static string SavePath => Application.persistentDataPath + "/Save/";
-
 
     public void ReStart()
     {
@@ -49,11 +47,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
-
     void Awake()
     {
-        if (instance == null || instance == default) { instance = this; DontDestroyOnLoad(instance.gameObject); }
-        else { Destroy(gameObject); }
+        if (instance == null || instance == default)
+        {
+            instance = this; DontDestroyOnLoad(instance.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         if (!Directory.Exists(SavePath)) { Directory.CreateDirectory(SavePath); }
 
@@ -162,13 +165,14 @@ public class GameManager : MonoBehaviour
         SaveLoad save = new SaveLoad((int)gameTime, savePoint, eventCheck, posStage, posMap, 0);
 
         Save(save, saveCheckString);
-}
+    }
 
     public static void Save(SaveLoad saveData, string saveFileName)
     {
         string saveJson = JsonUtility.ToJson(saveData);
         string saveFilePath = SavePath + saveFileName + ".json";
         File.WriteAllText(saveFilePath, saveJson);
+        Debug.Log(saveFilePath);
     }
 
     public bool LoadSuccess()
@@ -199,7 +203,6 @@ public class GameManager : MonoBehaviour
         string saveFile = File.ReadAllText(saveFilePath);
         SaveLoad saveData = JsonUtility.FromJson<SaveLoad>(saveFile);
         instance.gameTime = saveData.gameTime;
-        
         instance.MapEventCheck(saveData);
         
         return saveData;
